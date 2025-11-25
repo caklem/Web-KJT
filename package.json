@@ -1,0 +1,13 @@
+{
+  "name": "magang-kjt-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix package run dev",
+    "build": "npm --prefix package run build",
+    "start": "npm --prefix package run start",
+    "lint": "npm --prefix package run lint",
+    "install": "npm --prefix package install"
+  }
+}
+

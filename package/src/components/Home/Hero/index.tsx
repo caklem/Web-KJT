@@ -26,16 +26,32 @@ const Hero = () => {
         <div className="grid grid-cols-12 items-center">
           <motion.div {...leftAnimation} className="lg:col-span-6 col-span-12">
             <h1 className="md:text-50 sm:text-40 text-28 text-midnight_text lg:text-start mb-9 lg:w-full w-3/4">
-              One Top Solution for Electrical,   
+              CV. Kurnia Jaya Teknik
               <br />
               <span className="bg-border dark:bg-darkHeroBg  md:text-50 text-36 rounded-lg lg:text-start text-primary max-w-max">
-                Mechanical and Civil Needs for Your Company
+                Penyedia Peralatan Listrik Terpercaya
               </span>
               <br />
-              Growth and Sustainable.
+              di Jawa Timur.
             </h1>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-1">
+                <Icon
+                  icon="solar:star-bold"
+                  width="20"
+                  height="20"
+                  className="text-yellow-500"
+                />
+                <span className="text-18 font-semibold text-midnight_text dark:text-white">
+                  5,01
+                </span>
+              </div>
+              <span className="text-16 text-muted dark:text-white dark:text-opacity-70">
+                ulasan Google
+              </span>
+            </div>
             <p className="sm:text-19 text-16 text-muted dark:text-white dark:text-opacity-70 text-start lg:max-w-full sm:max-w-75%">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad id voluptates exercitationem maxime quidem quaerat modi ullam molestiae maiores! Quibusdam rerum rem consectetur amet facere veniam dolores iusto tenetur id!
+              Kami adalah penyedia peralatan listrik profesional di Jawa Timur dengan pengalaman bertahun-tahun. Melayani kebutuhan peralatan listrik untuk berbagai proyek dengan kualitas terbaik dan pelayanan yang memuaskan.
             </p>
             <div className="flex items-center mt-12 gap-11">
               <div>
@@ -70,26 +86,18 @@ const Hero = () => {
               <p className="text-20 text-muted dark:text-white dark:text-opacity-70 text-start mb-7">
                 Trusted by
               </p>
-              <div className="flex space-x-6 justify-start w-full">
+              <div className="flex space-x-6 justify-start w-full items-center flex-wrap gap-4">
                 {Heroimage.map((item, index) => (
-                  <Link key={index} href="/">
+                  <div key={index} className="flex items-center justify-center">
                     <Image
                       src={item.lightimage}
-                      alt="image"
-                      width={115}
-                      height={30}
-                      className="block dark:hidden"
-                      style={{ width: "100%", height: "100%" }}
+                      alt={`Trusted partner ${index + 1}`}
+                      width={120}
+                      height={60}
+                      className="object-contain opacity-80 hover:opacity-100 transition-opacity"
+                      style={{ maxHeight: "60px", maxWidth: "150px", width: "auto", height: "auto" }}
                     />
-                    <Image
-                      src={item.darkimage}
-                      alt="image"
-                      width={115}
-                      height={30}
-                      className="hidden dark:block"
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </Link>
+                  </div>
                 ))}
               </div>
             </div>
@@ -104,7 +112,7 @@ const Hero = () => {
               alt="image"
               width={498}
               height={651}
-              style={{ width: "100%", height: "100%" }}
+              style={{ width: "100%", height: "auto" }}
             />
           </motion.div>
         </div>

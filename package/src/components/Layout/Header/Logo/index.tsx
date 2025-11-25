@@ -5,21 +5,13 @@ const Logo: React.FC = () => {
   return (
     <Link href="/">
       <Image
-        src="/images/logo/logo.svg"
-        alt="logo"
-        width={160}
-        height={50}
+        src="/Kontent/LOGO 2.png"
+        alt="Kurnia Jaya Teknik Logo"
+        width={200}
+        height={60}
         quality={100}
-        className="dark:hidden"
-      />
-
-      <Image
-        src="/images/logo/logo1.svg"
-        alt="logo"
-        width={140}
-        height={30}
-        quality={100}
-        className="hidden dark:block"
+        className="object-contain"
+        priority
       />
     </Link>
   );

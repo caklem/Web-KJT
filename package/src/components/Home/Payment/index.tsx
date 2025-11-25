@@ -21,11 +21,11 @@ const Payment = () => {
   });
 
   const paymentItems = [
-    "Cards",
-    "Expenses",
-    "Bill Pay",
-    "Accounting",
-    "Reporting",
+    "Kualitas",
+    "Pelayanan",
+    "Keandalan",
+    "Profesional",
+    "Terpercaya",
   ];
 
   return (
@@ -37,9 +37,9 @@ const Payment = () => {
         <motion.div {...TopAnimation}>
           <div className="px-4 lg:px-12">
             <h2 className="text-center font-semibold md:text-35 sm:text-28 text-24 mb-8 text-midnight_text dark:text-white lg:mx-44">
-              Easy and affordable for your personal and
-              <span className="text-primary"> business payment </span>
-              needs.
+              Kepuasan Client adalah
+              <span className="text-primary"> Prioritas Utama </span>
+              Kami.
             </h2>
           </div>
           <div className="flex flex-wrap justify-center gap-10">

@@ -3,42 +3,38 @@ import { text } from "stream/consumers";
 //hero
 export const Heroimage = [
   {
-    lightimage: "/images/hero/google.png",
-    darkimage: "/images/hero/google_white.png",
+    lightimage: "/Kontent/Nestle.png",
+    darkimage: "/Kontent/Nestle.png",
   },
   {
-    lightimage: "/images/hero/pay.png",
-    darkimage: "/images/hero/pay_white.png",
+    lightimage: "/Kontent/krisbow.png",
+    darkimage: "/Kontent/krisbow.png",
   },
   {
-    lightimage: "/images/hero/stripe.png",
-    darkimage: "/images/hero/stripe_white.png",
-  },
-  {
-    lightimage: "/images/hero/wise.png",
-    darkimage: "/images/hero/wise_white.png",
+    lightimage: "/Kontent/Mandiri.png",
+    darkimage: "/Kontent/Mandiri.png",
   },
 ];
 
 // payment
 export const PaymentImage = [
   {
-    image: "/images/payment/user.svg",
-    title: "Create an account",
+    image: "/images/benefit/pic.svg",
+    title: "Kualitas Terjamin",
     details:
-      "Mobile app made easy check out across the web and in apps without having to enter any payment information.",
+      "Kami hanya menyediakan produk peralatan listrik dengan kualitas terbaik dan terpercaya untuk memastikan kepuasan pelanggan.",
   },
   {
-    image: "/images/payment/user.svg",
-    title: "Verify your identity",
+    image: "/images/benefit/contact.svg",
+    title: "Pelayanan Profesional",
     details:
-      "Mobile app made easy check out across the web and in apps without having to enter any payment information.",
+      "Tim profesional kami siap memberikan pelayanan terbaik dan solusi yang tepat untuk setiap kebutuhan peralatan listrik Anda.",
   },
   {
-    image: "/images/payment/user.svg",
-    title: "Link your bank account",
+    image: "/images/benefit/setting.svg",
+    title: "Komitmen Kepuasan",
     details:
-      "Mobile app made easy check out across the web and in apps without having to enter any payment information.",
+      "Kepuasan client adalah prioritas utama kami. Kami berkomitmen untuk memberikan pengalaman terbaik dalam setiap transaksi.",
   },
 ];
 

@@ -21,17 +21,17 @@
   --z-index-1: 1;
   --z-index-999: 999;
 
-  --color-primary: #2f73f2;
-  --color-danger: #dc3545;
-  --color-danger_text: #ff3c78;
+  --color-primary: #DC3545;
+  --color-danger: #C41E3A;
+  --color-danger_text: #E63946;
   --color-green: #3cd278;
-  --color-grey: #8e8e8e;
-  --color-muted: #547593;
-  --color-midnight_text: #102d47;
-  --color-border: #dfebfc;
+  --color-grey: #6C757D;
+  --color-muted: #6C757D;
+  --color-midnight_text: #212529;
+  --color-border: #DEE2E6;
   --color-darkmode: #08162b;
-  --color-hero-bg: #f3f9fd;
-  --color-dark-hero-bg: #121c2e;
+  --color-hero-bg: #FFF5F5;
+  --color-dark-hero-bg: #1A0F0F;
   --color-darkheader: #141d2f;
   --color-dark_border: #253c50;
   --color-foottext: #668199;
