@@ -1,29 +1,21 @@
 "use client";
-import Image from "next/image";
 import { motion, useInView } from "motion/react";
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
+import Image from "next/image";
 
-const galleryImages = [
-  "/Kontent/1.jpg",
-  "/Kontent/2.jpg",
-  "/Kontent/3.jpg",
-  "/Kontent/4.jpg",
-  "/Kontent/5.jpg",
+const partnerLogos = [
+  "/Kontent/krisbow.png",
+  "/Kontent/logo-jjlapp.png",
+  "/Kontent/Mandiri.png",
+  "/Kontent/Nestle.png",
+  "/Kontent/SSJ.webp",
+  "/Kontent/Surabayasakti.jpg",
+  "/Kontent/Sutindo.png",
 ];
 
-const Benefit = () => {
+const Partner = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
-  const [imageErrors, setImageErrors] = useState<{ [key: string]: boolean }>({});
-
-  useEffect(() => {
-    galleryImages.forEach((img) => {
-      const preload = new window.Image();
-      preload.src = img;
-      preload.onerror = () =>
-        setImageErrors((prev) => ({ ...prev, [img]: true }));
-    });
-  }, []);
 
   const TopAnimation = {
     initial: { y: "-100%", opacity: 0 },
@@ -31,7 +23,7 @@ const Benefit = () => {
     transition: { duration: 1, delay: 0.4 },
   };
 
-  const imageAnimation = (index: number) => ({
+  const logoAnimation = (index: number) => ({
     initial: { scale: 0.8, opacity: 0 },
     animate: inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 },
     transition: { duration: 0.5, delay: 0.2 + index * 0.1 },
@@ -46,38 +38,36 @@ const Benefit = () => {
         >
           <motion.div {...TopAnimation} className="items-start mb-12">
             <h2 className="font-semibold md:text-35 sm:text-28 text-24 text-midnight_text dark:text-white text-center">
-              <span className="text-primary">Gallery</span>
+              Partner{" "}
+              <span className="text-primary">Kami</span>
             </h2>
             <p className="text-center mt-4 text-base text-muted dark:text-white dark:text-opacity-70">
-              Dokumentasi Proyek dan Karya Kami
+              Perusahaan terpercaya yang telah bekerja sama dengan kami
             </p>
           </motion.div>
-
-          {/* Gallery */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {galleryImages.map((image, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
+            {partnerLogos.map((logo, index) => (
               <motion.div
                 key={index}
-                {...imageAnimation(index)}
-                className="relative overflow-hidden rounded-lg group cursor-pointer w-full"
-                style={{ aspectRatio: "4 / 3" }}
+                {...logoAnimation(index)}
+                className="flex items-center justify-center p-6 bg-white dark:bg-midnight_text rounded-xl border border-border dark:border-dark_border shadow-sm hover:shadow-md transition-all hover:scale-105"
               >
                 <Image
-                  src={image}
-                  alt={`Gallery image ${index + 1}`}
-                  width={400}
-                  height={300}
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  src={logo}
+                  alt={`Partner logo ${index + 1}`}
+                  width={150}
+                  height={100}
+                  className="object-contain max-h-20 w-auto"
+                  unoptimized
                 />
-                {/* Overlay dihapus agar gambar tidak tertutup */}
               </motion.div>
             ))}
           </div>
-          
         </div>
       </div>
     </section>
   );
 };
 
-export default Benefit;
+export default Partner;
+

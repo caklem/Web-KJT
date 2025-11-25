@@ -10,8 +10,8 @@ const Solution = () => {
           <div className="grid lg:grid-cols-2 items-center gap-12">
             <div>
               <h1 className="md:text-35 sm:text-28 text-24 font-semibold text-midnight_text dark:text-white text-center">
-                Tentang
-                <span className="text-primary max-w-max ml-2">Kami</span>
+                Tentang{" "}
+                <span className="text-primary">Kami</span>
               </h1>
               <div className="flex items-center justify-center gap-3 mb-4">
                 <div className="flex items-center gap-1">

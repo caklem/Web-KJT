@@ -2,83 +2,76 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import Link from "next/link";
-import { Icon } from "@iconify/react";
 import Image from "next/image";
-import { perks } from "@/app/api/data";
+
+const partnerLogos = [
+  "/Kontent/krisbow.png",
+  "/Kontent/logo-jjlapp.png",
+  "/Kontent/Mandiri.png",
+  "/Kontent/Nestle.png",
+  "/Kontent/SSJ.webp",
+  "/Kontent/Surabayasakti.jpg",
+  "/Kontent/Sutindo.png",
+];
 
 const Mobile = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
 
-  const leftAnimation = {
-    initial: { x: "-100%", opacity: 0 },
-    animate: inView ? { x: 0, opacity: 1 } : { x: "-100%", opacity: 0 },
-    transition: { duration: 1, delay: 0.4 },
-  };
-  const rightAnimation = {
-    initial: { x: "100%", opacity: 0 },
-    animate: inView ? { x: 0, opacity: 1 } : { x: "100%", opacity: 0 },
+  const TopAnimation = {
+    initial: { y: "-100%", opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : { y: "-100%", opacity: 0 },
     transition: { duration: 1, delay: 0.4 },
   };
 
+  const logoAnimation = (index: number) => ({
+    initial: { scale: 0.8, opacity: 0 },
+    animate: inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 },
+    transition: { duration: 0.5, delay: 0.2 + index * 0.1 },
+  });
+
   return (
-    <section className="dark:bg-darkmode overflow-x-hidden py-14">
-      <div className="container mx-auto lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-4">
-        <div ref={ref} className="grid md:grid-cols-12 items-center lg:gap-12 gap-6">
-          <motion.div {...leftAnimation} className="lg:col-span-6 col-span-12">
-            <h2 className="lg:text-35 text-24 text-midnight_text font-semibold dark:text-white">
-              Mobile wallets made for
-              <br />
-              <span className="lg:text-35 text-24 text-primary font-semibold lg:max-w-max">
-                any situation
-              </span>
+    <section className="dark:bg-darkmode py-14 overflow-x-hidden">
+      <div className="container lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-4 mx-auto">
+        <div
+          ref={ref}
+          className="dark:bg-midnight_text bg-heroBg rounded-3xl md:py-20 py-10 2xl:pr-14 2xl:pl-20 sm:px-14 px-6"
+        >
+          <motion.div {...TopAnimation} className="items-start mb-12">
+            <h2 className="font-semibold md:text-35 sm:text-28 text-24 text-midnight_text dark:text-white text-center">
+              Partner{" "}
+              <span className="text-primary">Kami</span>
             </h2>
-            <p className="mt-6 text-muted dark:text-white dark:text-opacity-70 lg:text-17 lg:max-w-full max-w-75%">
-              Cards issued through us can easily be added to mobile wallets to
-              be used to buy online, in store, and in-app.
+            <p className="text-center mt-4 text-base text-muted dark:text-white dark:text-opacity-70">
+              Perusahaan terpercaya yang telah bekerja sama dengan kami
             </p>
-            <div className="flex flex-col gap-6 mt-16">
-              {perks.map((item, index) => (
-                <div key={index} className="flex items-start gap-5">
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                    <Icon
-                      icon="solar:unread-outline"
-                      width="24"
-                      height="24"
-                      className="text-white"
-                    />
-                  </div>
-                  <p className="text-base text-muted dark:text-white dark:text-opacity-70">
-                    {item.text}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="flex items-center justify-start">
-              <Link
-                href="#"
-                className="lg:text-17 flex gap-4 items-center bg-primary text-white py-2 px-4 lg:py-3 lg:px-8 rounded-lg mt-12 border border-primary hover:text-primary hover:bg-transparent"
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
+            {partnerLogos.map((logo, index) => (
+              <motion.div
+                key={index}
+                {...logoAnimation(index)}
+                className="flex items-center justify-center p-6 bg-white dark:bg-midnight_text rounded-xl border border-border dark:border-dark_border shadow-sm hover:shadow-md transition-all hover:scale-105"
               >
-                Get Started
-                <Icon
-                  icon="solar:alt-arrow-right-linear"
-                  width="13"
-                  height="13"
+                <Image
+                  src={logo}
+                  alt={`Partner logo ${index + 1}`}
+                  width={150}
+                  height={100}
+                  className="object-contain max-h-20 w-auto"
+                  unoptimized
                 />
-              </Link>
-            </div>
-          </motion.div>
-          <motion.div {...rightAnimation} className="lg:col-span-6 col-span-12">
-            <div className="lg:max-w-full max-w-75% mx-auto">
-              <Image
-                src="/images/mobile/mobile.png"
-                alt="image"
-                width={555}
-                height={634}
-                style={{ width: "100%", height: "100%" }}
-              />
-            </div>
-          </motion.div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/partner"
+              className="inline-flex items-center gap-2 bg-primary text-white py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold"
+            >
+              Lihat Semua Partner
+            </Link>
+          </div>
         </div>
       </div>
     </section>

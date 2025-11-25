@@ -47,8 +47,8 @@ const Spend: FC = () => {
         <div ref={ref}>
           <motion.div {...TopAnimation} className="text-center">
             <h2 className="md:text-35 sm:text-28 text-24 text-midnight_text font-semibold mb-5 dark:text-white">
-              Legalitas
-              <span className="text-primary ml-2">Perusahaan</span>
+              Legalitas{" "}
+              <span className="text-primary">Perusahaan</span>
             </h2>
             <p className="text-17 text-muted dark:text-white dark:text-opacity-70 lg:font-medium mx-1 lg:mx-64 mb-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

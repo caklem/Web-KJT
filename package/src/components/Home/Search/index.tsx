@@ -82,11 +82,9 @@ const Search = () => {
                 height={38}
               />
             </div>
-            <h2 className="text-midnight_text font-bold dark:text-white md:text-35 sm:text-28 text-24">
-              Get started in under
-              <span className="lg:text-35 text-primary text-24">
-                15 minutes
-              </span>
+            <h2 className="text-midnight_text font-semibold dark:text-white md:text-35 sm:text-28 text-24">
+              Get started in under{" "}
+              <span className="text-primary">15 minutes</span>
             </h2>
             <div className="md:max-w-75% mx-auto mt-6">
               <div className="flex lg:items-center md:items-start bg-white dark:bg-darkHeroBg shadow-md rounded-2xl overflow-hidden">

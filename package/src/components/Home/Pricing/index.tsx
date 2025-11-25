@@ -35,10 +35,8 @@ const Pricing = () => {
           className="container mx-auto lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-4 "
         >
           <motion.div {...TopAnimation}>
-            <h2 className="font-bold md:text-35 sm:text-28 text-24 text-midnight_text dark:text-white text-center">
-              <span className="bg-border dark:bg-darkHeroBg rounded-lg text-primary max-w-max px-3 py-1">
-                Kontak
-              </span>
+            <h2 className="font-semibold md:text-35 sm:text-28 text-24 text-midnight_text dark:text-white text-center">
+              <span className="text-primary">Kontak</span>
             </h2>
             <p className="text-base text-6 font-normal text-muted dark:text-darktext text-center m-auto py-4 lg:max-w-50% sm:max-w-75%">
               Hubungi kami untuk informasi lebih lanjut tentang produk dan layanan kami. Tim kami siap membantu Anda.
