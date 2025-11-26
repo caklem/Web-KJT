@@ -4,6 +4,7 @@ export const headerData: HeaderItem[] = [
   { label: "Home", href: "/" },
   { label: "Tentang Kami", href: "/about" },
   { label: "Gallery", href: "/#benefit" },
+  { label: "Lisensi", href: "/lisensi" },
   { label: "Partner", href: "/partner" },
   { label: "Services", href: "/services" },
   { label: "Contact", href: "/#pricing" },
