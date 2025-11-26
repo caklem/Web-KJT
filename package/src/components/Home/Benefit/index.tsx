@@ -1,14 +1,26 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView } from "motion/react";
 import { useRef, useEffect, useState } from "react";
 
 const galleryImages = [
-  "/Kontent/1.jpg",
-  "/Kontent/2.jpg",
-  "/Kontent/3.jpg",
-  "/Kontent/4.jpg",
-  "/Kontent/5.jpg",
+  "/Kontent/Foto Portofolio/P1.jpg",
+  "/Kontent/Foto Portofolio/P2.jpg",
+  "/Kontent/Foto Portofolio/P3.jpg",
+  "/Kontent/Foto Portofolio/P4.jpg",
+  "/Kontent/Foto Portofolio/P5.jpg",
+  "/Kontent/Foto Portofolio/P6.jpg",
+  "/Kontent/Foto Portofolio/P7.jpg",
+  "/Kontent/Foto Portofolio/P8.jpg",
+  "/Kontent/Foto Portofolio/P9.jpg",
+  "/Kontent/Foto Portofolio/P10.jpg",
+  "/Kontent/Foto Portofolio/P11.jpg",
+  "/Kontent/Foto Portofolio/P12.jpg",
+  "/Kontent/Foto Portofolio/P13.jpg",
+  "/Kontent/Foto Portofolio/P14.jpg",
+  "/Kontent/Foto Portofolio/P15.jpg",
+  "/Kontent/Foto Portofolio/P16.jpg",
 ];
 
 const Benefit = () => {
@@ -44,18 +56,21 @@ const Benefit = () => {
           ref={ref}
           className="dark:bg-midnight_text bg-heroBg rounded-3xl md:py-20 py-10 2xl:pr-14 2xl:pl-20 sm:px-14 px-6"
         >
-          <motion.div {...TopAnimation} className="items-start mb-12">
-            <h2 className="font-semibold md:text-35 sm:text-28 text-24 text-midnight_text dark:text-white text-center">
-              <span className="text-primary">Gallery</span>
+          <motion.div {...TopAnimation} className="items-start mb-12 text-center">
+            <p className="text-14 uppercase tracking-[0.4em] text-muted dark:text-white">
+              Dokumentasi
+            </p>
+            <h2 className="font-semibold md:text-35 sm:text-28 text-24 text-midnight_text dark:text-white mt-2">
+              Dokumentasi <span className="text-primary">Lapangan</span>
             </h2>
             <p className="text-center mt-4 text-base text-muted dark:text-white dark:text-opacity-70">
-              Dokumentasi Proyek dan Karya Kami
+              Koleksi foto langsung dari proyek mekanikal, elektrikal, dan otomatisasi kami.
             </p>
           </motion.div>
 
           {/* Gallery */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {galleryImages.map((image, index) => (
+            {galleryImages.slice(0, 6).map((image, index) => (
               <motion.div
                 key={index}
                 {...imageAnimation(index)}
@@ -73,7 +88,14 @@ const Benefit = () => {
               </motion.div>
             ))}
           </div>
-          
+          <div className="text-center mt-8">
+            <Link
+              href="/partner"
+              className="inline-flex items-center gap-2 bg-primary text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition"
+            >
+              Lihat Portofolio Pekerjaan
+            </Link>
+          </div>
         </div>
       </div>
     </section>

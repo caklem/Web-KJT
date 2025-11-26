@@ -1,18 +1,11 @@
 "use client";
+
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const partnerLogos = [
-  "/Kontent/krisbow.png",
-  "/Kontent/logo-jjlapp.png",
-  "/Kontent/Mandiri.png",
-  "/Kontent/Nestle.png",
-  "/Kontent/SSJ.webp",
-  "/Kontent/Surabayasakti.jpg",
-  "/Kontent/Sutindo.png",
-];
+const partnerLogos = ["/Kontent/Nestle.png", "/Kontent/Gea.jpg"];
 
 const Mobile = () => {
   const ref = useRef(null);
@@ -37,39 +30,41 @@ const Mobile = () => {
           ref={ref}
           className="dark:bg-midnight_text bg-heroBg rounded-3xl md:py-20 py-10 2xl:pr-14 2xl:pl-20 sm:px-14 px-6"
         >
-          <motion.div {...TopAnimation} className="items-start mb-12">
-            <h2 className="font-semibold md:text-35 sm:text-28 text-24 text-midnight_text dark:text-white text-center">
-              Partner{" "}
-              <span className="text-primary">Kami</span>
+          <motion.div {...TopAnimation} className="items-start mb-12 text-center">
+            <h2 className="font-semibold md:text-35 sm:text-28 text-24 text-midnight_text dark:text-white">
+              Client <span className="text-primary">Kami</span>
             </h2>
             <p className="text-center mt-4 text-base text-muted dark:text-white dark:text-opacity-70">
-              Perusahaan terpercaya yang telah bekerja sama dengan kami
+              Klien terpilih yang mempercayakan proyek mekanikal & elektrikal kepada kami
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
-            {partnerLogos.map((logo, index) => (
-              <motion.div
-                key={index}
-                {...logoAnimation(index)}
-                className="flex items-center justify-center p-6 bg-white dark:bg-midnight_text rounded-xl border border-border dark:border-dark_border shadow-sm hover:shadow-md transition-all hover:scale-105"
-              >
-                <Image
-                  src={logo}
-                  alt={`Partner logo ${index + 1}`}
-                  width={150}
-                  height={100}
-                  className="object-contain max-h-20 w-auto"
-                  unoptimized
-                />
-              </motion.div>
-            ))}
+
+          <div className="flex justify-center mt-8">
+            <div className="grid grid-cols-2 gap-8 justify-items-center">
+              {partnerLogos.map((logo, index) => (
+                <motion.div
+                  key={logo}
+                  {...logoAnimation(index)}
+                  className="flex items-center justify-center p-6 bg-white dark:bg-midnight_text rounded-xl border border-border dark:border-dark_border shadow-sm hover:shadow-md transition-all hover:scale-105"
+                >
+                  <Image
+                    src={logo}
+                    alt={`Client logo ${index + 1}`}
+                    width={150}
+                    height={100}
+                    className="object-contain max-h-20 w-auto"
+                    unoptimized
+                  />
+                </motion.div>
+              ))}
+            </div>
           </div>
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 flex justify-center">
             <Link
               href="/partner"
               className="inline-flex items-center gap-2 bg-primary text-white py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold"
             >
-              Lihat Semua Partner
+              Lihat Portofolio Pekerjaan
             </Link>
           </div>
         </div>

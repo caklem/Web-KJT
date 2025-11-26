@@ -12,7 +12,8 @@ const dmsans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CV. Kurnia Jaya Teknik - Penyedia Peralatan Listrik di Jawa Timur",
-  description: "CV. Kurnia Jaya Teknik - Penyedia peralatan listrik terpercaya di Jawa Timur dengan rating 5,01 ulasan Google. Melayani Mechanical, Electrical & Automation System.",
+  description:
+    "CV. Kurnia Jaya Teknik adalah penyedia peralatan listrik terpercaya di Jawa Timur. Melayani Mechanical, Electrical & Automation System.",
   icons: {
     icon: [
       { url: "/Kontent/LOGO 2.png", type: "image/png" },

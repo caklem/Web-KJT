@@ -13,22 +13,6 @@ const Solution = () => {
                 Tentang{" "}
                 <span className="text-primary">Kami</span>
               </h1>
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="flex items-center gap-1">
-                  <Icon
-                    icon="solar:star-bold"
-                    width="20"
-                    height="20"
-                    className="text-yellow-500"
-                  />
-                  <span className="text-18 font-semibold text-midnight_text dark:text-white">
-                    5,01
-                  </span>
-                </div>
-                <span className="text-16 text-muted dark:text-white dark:text-opacity-70">
-                  ulasan Google
-                </span>
-              </div>
               <p className="mt-6 text-base text-muted dark:text-white dark:text-opacity-70 lg:max-w-full sm:max-w-75% text-center">
                 CV. Kurnia Jaya Teknik adalah penyedia peralatan listrik terpercaya di Jawa Timur dengan pengalaman bertahun-tahun. Kami melayani kebutuhan peralatan listrik untuk berbagai proyek dengan kualitas terbaik dan pelayanan yang memuaskan.
               </p>

@@ -5,7 +5,8 @@ import About from "@/components/About";
 
 export const metadata: Metadata = {
   title: "Tentang Kami | CV. Kurnia Jaya Teknik",
-  description: "CV. Kurnia Jaya Teknik - Penyedia peralatan listrik terpercaya di Jawa Timur dengan rating 5,01 ulasan Google. Melayani Mechanical, Electrical & Automation System.",
+  description:
+    "CV. Kurnia Jaya Teknik adalah penyedia peralatan listrik terpercaya di Jawa Timur. Melayani Mechanical, Electrical & Automation System.",
 };
 
 const page = () => {

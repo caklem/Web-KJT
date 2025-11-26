@@ -63,17 +63,17 @@ const Method = () => {
                       Fully programmable, debit - credit physical & virtual
                       cards for individuals and businesses.
                     </p>
-                    <Link
-                      href="#"
-                      className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
-                    >
-                      Get Started
-                      <Icon
-                        icon="solar:alt-arrow-right-linear"
-                        width="13"
-                        height="13"
-                      />
-                    </Link>
+                  <Link
+                    href="/contact"
+                    className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
+                  >
+                    Hubungi Kami
+                    <Icon
+                      icon="solar:alt-arrow-right-linear"
+                      width="13"
+                      height="13"
+                    />
+                  </Link>
                   </div>
                   <div>
                     <Image
@@ -101,10 +101,10 @@ const Method = () => {
                     for individuals and businesses.
                   </p>
                   <Link
-                    href="#"
+                    href="/contact"
                     className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
                   >
-                    Get Started
+                    Hubungi Kami
                     <Icon
                       icon="solar:alt-arrow-right-linear"
                       width="13"
@@ -135,10 +135,10 @@ const Method = () => {
                     for individuals and businesses.
                   </p>
                   <Link
-                    href="#"
+                    href="/contact"
                     className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
                   >
-                    Get Started
+                    Hubungi Kami
                     <Icon
                       icon="solar:alt-arrow-right-linear"
                       width="13"
@@ -180,10 +180,10 @@ const Method = () => {
                     for individuals and businesses.
                   </p>
                   <Link
-                    href="#"
+                    href="/contact"
                     className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
                   >
-                    Get Started
+                    Hubungi Kami
                     <Icon
                       icon="solar:alt-arrow-right-linear"
                       width="13"

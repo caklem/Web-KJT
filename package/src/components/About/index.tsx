@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import VisionMission from "@/components/VisionMission";
 
 const About = () => {
   return (
@@ -14,27 +15,14 @@ const About = () => {
               <h2 className="md:text-35 sm:text-28 text-24 font-semibold text-midnight_text dark:text-white mb-6">
                 Tentang <span className="text-primary">Kami</span>
               </h2>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="flex items-center gap-1">
-                  <Icon
-                    icon="solar:star-bold"
-                    width="24"
-                    height="24"
-                    className="text-yellow-500"
-                  />
-                  <span className="text-20 font-semibold text-midnight_text dark:text-white">
-                    5,01
-                  </span>
-                </div>
-                <span className="text-18 text-muted dark:text-white dark:text-opacity-70">
-                  ulasan Google
-                </span>
-              </div>
-              <p className="text-base text-muted dark:text-white dark:text-opacity-70 mb-6 leading-relaxed">
-                CV. Kurnia Jaya Teknik adalah penyedia peralatan listrik terpercaya di Jawa Timur dengan pengalaman bertahun-tahun dalam melayani kebutuhan peralatan listrik untuk berbagai proyek. Kami berkomitmen untuk menyediakan produk berkualitas tinggi dan pelayanan yang memuaskan bagi setiap pelanggan.
+              <p className="text-base text-muted dark:text-white dark:text-opacity-70 mb-6 leading-relaxed whitespace-pre-line">
+                Dalam menjalankan usahanya, perusahaan kami mempunyai prinsip tanggung jawab dan kepercayaan, sehingga diharapkan mampu menciptakan hubungan yang efisien antara pihak internal perusahaan dalam hal ini anggota dan pihak eksternal perusahaan dalam hal ini pengguna jasa dan atau pihak yang ada kaitan hubungan kerja dengan perusahaan. Perusahaan kami memiliki tenaga ahli bersertifikasi dan berpengalaman. Komitmen CV. Kurnia Jaya Teknik untuk menyelesaikan setiap amanah pekerjaan yang telah dipercayakan tidak terlepas dari peran setiap anggota dalam melakukan perencanaan, pelaksanaan dan pengendalian proyek dengan sistem manajemen dan metode yang efektif serta memperhatikan standar K3 (Keselamatan Kesehatan Kerja) dan lingkungan kerja.
               </p>
-              <p className="text-base text-muted dark:text-white dark:text-opacity-70 mb-6 leading-relaxed">
-                Sebagai perusahaan yang fokus pada Mechanical, Electrical & Automation System, kami memahami pentingnya kualitas dan keandalan dalam setiap produk yang kami tawarkan. Tim profesional kami siap membantu Anda menemukan solusi terbaik untuk kebutuhan peralatan listrik Anda.
+              <p className="text-base text-muted dark:text-white dark:text-opacity-70 mb-6 leading-relaxed whitespace-pre-line">
+                Kurnia Jaya Teknik merupakan perusahaan berbadan hukum CV (Commanditaire Vennootschap) atau perseorangan dengan lokasi usaha berada di Pasuruan. Berdirinya perusahaan kami sebagai bentuk respon terhadap peluang di dunia engineering yang semakin terbuka dan berkembang di Indonesia. CV. Kurnia Jaya Teknik bergerak di bidang usaha kontraktor mekanikal, elektrikal, sistem otomasi, perdagangan dan jasa lainnya. Perusahaan ini berdiri pada tanggal 12 Maret 2019 berdasarkan akta nomor 08 yang dibuat oleh Notaris Achmad Haris Hidayat, SH., M.KN. Dan telah memperoleh persetujuan Menteri Hukum dan Hak Asasi Manusia Republik Indonesia melalui surat keputusan nomor: AHU-0018171-AH.01.14 Tahun 2019, melalui surat keputusan tersebut perusahaan ditetapkan sebagai Perusahaan Persero Komanditer, yaitu menjadi CV. Kurnia Jaya Teknik.
+              </p>
+              <p className="text-base text-muted dark:text-white dark:text-opacity-70 mb-6 leading-relaxed whitespace-pre-line">
+                Seiring memasuki era baru industri 4.0 dan sesuai visi & misi perusahaan, maka perusahaan kami akan terus menerus melakukan update dan upgrade teknologi demi menjadi perusahaan yang dapat dihandalkan dan terpercaya.
               </p>
               <Link
                 href="/contact"
@@ -61,6 +49,9 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        {/* Vision & Mission */}
+        <VisionMission />
 
         {/* Company Values */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
