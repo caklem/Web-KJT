@@ -5,5 +5,5 @@ export const headerData: HeaderItem[] = [
   { label: "Tentang Kami", href: "/about" },
   { label: "Lisensi", href: "/lisensi" },
   { label: "Portofolio", href: "/portfolio" },
-  { label: "Contact", href: "/#pricing" },
+  { label: "Hubungi Kami", href: "/contact" },
 ];

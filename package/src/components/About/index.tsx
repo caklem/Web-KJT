@@ -83,45 +83,64 @@ const About = () => {
         {/* ============================ */}
         <VisionMission />
 
-        {/* ============================ */}
-        {/*       COMPANY VALUES         */}
-        {/* ============================ */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {[
-            {
-              icon: "solar:medal-ribbons-star-bold",
-              title: "Kualitas Terjamin",
-              desc: "Kami menyediakan produk listrik berkualitas terbaik yang telah teruji dan terpercaya.",
-            },
-            {
-              icon: "solar:hand-stars-bold",
-              title: "Pelayanan Profesional",
-              desc: "Tim profesional kami siap memberikan solusi terbaik untuk kebutuhan peralatan listrik Anda.",
-            },
-            {
-              icon: "solar:map-point-bold",
-              title: "Melayani Jawa Timur",
-              desc: "Menjangkau seluruh wilayah Jawa Timur dengan komitmen layanan cepat dan tepat.",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="bg-heroBg dark:bg-midnight_text rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow"
-            >
-              <Icon
-                icon={item.icon}
-                width="48"
-                height="48"
-                className="text-primary mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold text-midnight_text dark:text-white mb-3">
-                {item.title}
-              </h3>
-              <p className="text-muted dark:text-white/70 text-base leading-relaxed">
-                {item.desc}
-              </p>
+        {/* Company Values */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-heroBg dark:bg-midnight_text rounded-2xl p-6 text-center">
+            <div className="flex justify-center mb-4">
+              <div className="w-20 h-20 bg-white dark:bg-darkmode rounded-full flex items-center justify-center shadow-lg">
+                <Icon
+                  icon="solar:check-circle-bold"
+                  width="48"
+                  height="48"
+                  color="#DC3545"
+                />
+              </div>
             </div>
-          ))}
+            <h3 className="text-22 font-semibold text-midnight_text dark:text-white mb-3">
+              Kualitas Terjamin
+            </h3>
+            <p className="text-base text-muted dark:text-white dark:text-opacity-70">
+              Kami hanya menyediakan produk peralatan listrik dengan kualitas terbaik dan terpercaya untuk memastikan kepuasan pelanggan.
+            </p>
+          </div>
+
+          <div className="bg-heroBg dark:bg-midnight_text rounded-2xl p-6 text-center">
+            <div className="flex justify-center mb-4">
+              <div className="w-20 h-20 bg-white dark:bg-darkmode rounded-full flex items-center justify-center shadow-lg">
+                <Icon
+                  icon="solar:user-hand-up-bold"
+                  width="48"
+                  height="48"
+                  color="#DC3545"
+                />
+              </div>
+            </div>
+            <h3 className="text-22 font-semibold text-midnight_text dark:text-white mb-3">
+              Pelayanan Profesional
+            </h3>
+            <p className="text-base text-muted dark:text-white dark:text-opacity-70">
+              Tim profesional kami siap memberikan pelayanan terbaik dan solusi yang tepat untuk setiap kebutuhan peralatan listrik Anda.
+            </p>
+          </div>
+
+          <div className="bg-heroBg dark:bg-midnight_text rounded-2xl p-6 text-center">
+            <div className="flex justify-center mb-4">
+              <div className="w-20 h-20 bg-white dark:bg-darkmode rounded-full flex items-center justify-center shadow-lg">
+                <Icon
+                  icon="solar:heart-bold"
+                  width="48"
+                  height="48"
+                  color="#DC3545"
+                />
+              </div>
+            </div>
+            <h3 className="text-22 font-semibold text-midnight_text dark:text-white mb-3">
+              Melayani Jawa Timur
+            </h3>
+            <p className="text-base text-muted dark:text-white dark:text-opacity-70">
+              Kami melayani seluruh wilayah Jawa Timur dengan komitmen untuk memberikan akses mudah terhadap peralatan listrik berkualitas.
+            </p>
+          </div>
         </div>
 
         {/* ============================ */}
