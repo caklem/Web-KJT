@@ -141,18 +141,20 @@ const ContactInfo = () => {
                   </div>
                 </motion.div>
 
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-white border border-primary py-3 px-6 rounded-lg hover:bg-primary hover:text-white transition-all w-full font-semibold text-16 shadow-md hover:shadow-lg text-black"
+                <a
+                  href="https://wa.me/6281234567890"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-midnight_text dark:text-white border-2 border-primary py-4 px-8 rounded-lg hover:bg-primary hover:text-white transition-all w-full font-bold text-17 shadow-md hover:shadow-lg cursor-pointer group"
                 >
                   <Icon
-                    icon="solar:phone-calling-bold"
-                    width="20"
-                    height="20"
-                    className="text-primary"
+                    icon="ic:baseline-whatsapp"
+                    width="24"
+                    height="24"
+                    className="text-primary group-hover:text-white transition-colors flex-shrink-0"
                   />
-                  <span className="font-bold text-black">Hubungi <span className="text-primary">Kami</span></span>
-                </Link>
+                  <span className="group-hover:text-white whitespace-nowrap">Hubungi <span className="text-primary group-hover:text-white transition-colors">Kami</span></span>
+                </a>
               </div>
 
               {/* Google Maps */}

@@ -4,25 +4,25 @@ import Location from "@/components/Contact/OfficeLocation";
 import React from "react";
 import HeroSub from "@/components/SharedComponents/HeroSub";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Contact | Nicktio",
+  title: "Hubungi Kami | CV. Kurnia Jaya Teknik",
+  description: "Hubungi CV. Kurnia Jaya Teknik untuk konsultasi dan informasi lebih lanjut mengenai peralatan listrik dan layanan kami.",
 };
 
 const page = () => {
   const breadcrumbLinks = [
-    { href: "/", text: "Home" },
-    { href: "/contact", text: "Contact" },
+    { href: "/", text: "Beranda" },
+    { href: "/contact", text: "Hubungi Kami" },
   ];
   return (
     <>
       <HeroSub
-        title="Contact Us"
-        description="Letraset sheets containing Lorem Ipsum passages and more recently with desktop publishing Variou"
+        title="Hubungi Kami"
+        description="Siap membantu kebutuhan peralatan listrik Anda"
         breadcrumbLinks={breadcrumbLinks}
       />
       <ContactInfo />
-      <ContactForm />
-      <Location />
     </>
   );
 };

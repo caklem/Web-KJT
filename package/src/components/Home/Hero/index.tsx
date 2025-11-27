@@ -48,58 +48,24 @@ const Hero = () => {
             <p className="sm:text-19 text-16 text-muted dark:text-white dark:text-opacity-70 text-start lg:max-w-full sm:max-w-75%">
               Kami adalah penyedia peralatan listrik profesional di Jawa Timur dengan pengalaman bertahun-tahun. Melayani kebutuhan peralatan listrik untuk berbagai proyek dengan kualitas terbaik dan pelayanan yang memuaskan.
             </p>
-            <div className="flex items-center mt-12 gap-11">
-              <div>
-                <Link
-                  href="/contact"
-                  className="text-17 flex gap-2 items-center bg-primary text-white py-3 px-8 rounded-lg border border-primary hover:text-primary hover:bg-transparent"
-                >
-                  Hubungi Kami
-                  <Icon
-                    icon="solar:alt-arrow-right-linear"
-                    width="13"
-                    height="13"
-                  />
-                </Link>
-              </div>
-              <div>
-                <Link
-                  href="#"
-                  className="text-17 flex gap-2 items-center text-muted dark:text-white dark:text-opacity-70 hover:text-primary"
-                >
-                  See Features
-                  <Icon
-                    icon="solar:alt-arrow-right-linear"
-                    width="13"
-                    height="13"
-                  />
-                </Link>
-              </div>
-            </div>
-
-            <div className="lg:my-28 my-12">
-              <p className="text-20 text-muted dark:text-white dark:text-opacity-70 text-start mb-7">
-                Trusted by
-              </p>
-              <div className="flex space-x-6 justify-start w-full items-center flex-wrap gap-4">
-                {Heroimage.map((item, index) => (
-                  <div key={index} className="flex items-center justify-center">
-                    <Image
-                      src={item.lightimage}
-                      alt={`Trusted partner ${index + 1}`}
-                      width={120}
-                      height={60}
-                      className="object-contain opacity-80 hover:opacity-100 transition-opacity"
-                      style={{ maxHeight: "60px", maxWidth: "150px", width: "auto", height: "auto" }}
-                    />
-                  </div>
-                ))}
-              </div>
+            <div className="flex items-center mt-12">
+              <Link
+                href="/contact"
+                className="text-17 flex gap-2 items-center bg-primary text-white py-3 px-8 rounded-lg border-2 border-primary hover:bg-white hover:text-midnight_text dark:hover:text-white dark:hover:bg-transparent transition-all group"
+              >
+                <span className="font-bold whitespace-nowrap">Hubungi Kami</span>
+                <Icon
+                  icon="solar:alt-arrow-right-linear"
+                  width="13"
+                  height="13"
+                  className="group-hover:text-primary dark:group-hover:text-white transition-colors"
+                />
+              </Link>
             </div>
           </motion.div>
           <motion.div
             {...rightAnimation}
-            className="lg:col-span-6 col-span-12 pl-0 lg:block hidden flex items-start"
+            className="lg:col-span-6 col-span-12 pl-0 hidden lg:block"
           >
             <div className="relative w-full max-w-[498px] mx-auto">
               <Image
@@ -118,6 +84,26 @@ const Hero = () => {
                       currentSlide === index ? "bg-primary" : "bg-white/40"
                     }`}
                   />
+                ))}
+              </div>
+            </div>
+            
+            <div className="mt-8">
+              <p className="text-20 text-muted dark:text-white dark:text-opacity-70 text-center mb-7">
+                Trusted by
+              </p>
+              <div className="flex space-x-6 justify-center w-full items-center flex-wrap gap-4">
+                {Heroimage.map((item, index) => (
+                  <div key={index} className="flex items-center justify-center">
+                    <Image
+                      src={item.lightimage}
+                      alt={`Trusted partner ${index + 1}`}
+                      width={120}
+                      height={60}
+                      className="object-contain opacity-80 hover:opacity-100 transition-opacity"
+                      style={{ maxHeight: "60px", maxWidth: "150px", width: "auto", height: "auto" }}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
