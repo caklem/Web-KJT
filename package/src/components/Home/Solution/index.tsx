@@ -6,7 +6,7 @@ const Solution = () => {
   return (
     <section className="dark:bg-darkmode overflow-x-hidden py-14">
       <div className="container mx-auto lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-4">
-        <div className="bg-heroBg dark:bg-midnight_text rounded-3xl lg:px-16 px-4 py-12">
+        <div className="bg-white dark:bg-midnight_text rounded-3xl lg:px-16 px-4 py-12 shadow-lg">
           <div className="grid lg:grid-cols-2 items-center gap-12">
             <div>
               <h1 className="md:text-35 sm:text-28 text-24 font-semibold text-midnight_text dark:text-white text-center">
