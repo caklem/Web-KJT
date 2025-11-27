@@ -9,15 +9,14 @@ const Pricing = () => {
   const inView = useInView(ref);
 
   const TopAnimation = {
-    initial: { y: "-100%", opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: "-100%", opacity: 0 },
-    transition: { duration: 1, delay: 0.4 },
+    initial: { y: -50, opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : {},
+    transition: { duration: 0.8 },
   };
-
-  const bottomAnimation = {
-    initial: { y: "100%", opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: "100%", opacity: 0 },
-    transition: { duration: 1, delay: 0.4 },
+  const BottomAnimation = {
+    initial: { y: 50, opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : {},
+    transition: { duration: 0.8, delay: 0.2 },
   };
 
   const cardAnimation = (index: number) => ({
@@ -42,7 +41,7 @@ const Pricing = () => {
               Hubungi kami untuk informasi lebih lanjut tentang produk dan layanan kami. Tim kami siap membantu Anda.
             </p>
           </motion.div>
-          <motion.div {...bottomAnimation}>
+          <motion.div {...BottomAnimation}>
             <div className="grid lg:grid-cols-2 gap-6 mt-8">
               {/* Contact Info Cards */}
               <div className="space-y-4">

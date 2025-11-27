@@ -9,16 +9,15 @@ const Payment = () => {
   const inView = useInView(ref);
 
   const TopAnimation = {
-    initial: { y: "-100%", opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: "-100%", opacity: 0 },
-    transition: { duration: 1, delay: 0.4 },
+    initial: { y: -50, opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : {},
+    transition: { duration: 0.8 },
   };
-
-  const bottomAnimation = (index : any) => ({
-    initial: { y: "100%", opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: "100%", opacity: 0 },
-    transition: { duration: 1, delay: 0.4 + index * 0.4 },
-  });
+  const BottomAnimation = {
+    initial: { y: 50, opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : {},
+    transition: { duration: 0.8, delay: 0.2 },
+  };
 
   const paymentItems = [
     "Kualitas",
@@ -58,11 +57,11 @@ const Payment = () => {
           </div>
         </motion.div>
 
-        <div className="flex justify-start sm:mt-20 mt-10">
+        <motion.div {...BottomAnimation} className="flex justify-start sm:mt-20 mt-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-14 gap-8">
             {PaymentImage.map((item, index) => (
               <div key={index}>
-                <motion.div {...bottomAnimation(index)}>
+                <motion.div {...BottomAnimation}>
                   <div className="rounded-full">
                     <Image
                       src={item.image}
@@ -86,7 +85,7 @@ const Payment = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

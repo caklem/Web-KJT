@@ -115,13 +115,18 @@ const Spend: FC = () => {
 
               {/* Button */}
               <div className="mt-10 text-center">
-                <button
-                  onClick={() => (window.location.href = "/lisensi")}
-                  className="bg-primary text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-red-700 
-                  transition-all duration-200 hover:scale-105 active:scale-95"
+                <a
+                  href="/lisensi"
+                  className="text-17 flex gap-2 items-center bg-primary text-white py-3 px-8 rounded-lg border-2 border-primary hover:bg-white hover:text-primary hover:shadow-lg transition-all duration-300 group mx-auto w-fit justify-center"
                 >
-                  Lihat Selengkapnya
-                </button>
+                  <span className="font-bold whitespace-nowrap">Lihat Selengkapnya</span>
+                  <span className="group-hover:text-primary transition-colors">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 19L19 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                </a>
               </div>
             </motion.div>
           </div>

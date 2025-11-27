@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useInView } from "motion/react";
+import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 const galleryImages = [
@@ -38,11 +38,15 @@ const Documentation = () => {
   }, []);
 
   const TopAnimation = {
-    initial: { y: "-100%", opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: "-100%", opacity: 0 },
-    transition: { duration: 1, delay: 0.4 },
+    initial: { y: -50, opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : {},
+    transition: { duration: 0.8 },
   };
-
+  const BottomAnimation = {
+    initial: { y: 50, opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : {},
+    transition: { duration: 0.8, delay: 0.2 },
+  };
   const imageAnimation = (index: number) => ({
     initial: { scale: 0.8, opacity: 0 },
     animate: inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 },
@@ -69,7 +73,7 @@ const Documentation = () => {
           </motion.div>
 
           {/* Gallery */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <motion.div {...BottomAnimation} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {galleryImages.slice(0, 6).map((image, index) => (
               <motion.div
                 key={index}
@@ -87,13 +91,19 @@ const Documentation = () => {
                 {/* Overlay dihapus agar gambar tidak tertutup */}
               </motion.div>
             ))}
-          </div>
-          <div className="text-center mt-8">
+          </motion.div>
+          <div className="text-center mt-8 flex justify-center">
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-2 bg-primary text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition"
+              className="text-17 flex gap-2 items-center bg-primary text-white py-3 px-8 rounded-lg border-2 border-primary hover:bg-white hover:text-primary hover:shadow-lg transition-all duration-300 group"
             >
-              Lihat Portofolio Pekerjaan
+              <span className="font-bold whitespace-nowrap">Lihat Portofolio Pekerjaan</span>
+              <span className="group-hover:text-primary transition-colors">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 19L19 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
             </Link>
           </div>
         </div>

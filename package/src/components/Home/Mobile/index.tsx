@@ -12,11 +12,15 @@ const Mobile = () => {
   const inView = useInView(ref);
 
   const TopAnimation = {
-    initial: { y: "-100%", opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: "-100%", opacity: 0 },
-    transition: { duration: 1, delay: 0.4 },
+    initial: { y: -50, opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : {},
+    transition: { duration: 0.8 },
   };
-
+  const BottomAnimation = {
+    initial: { y: 50, opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : {},
+    transition: { duration: 0.8, delay: 0.2 },
+  };
   const logoAnimation = (index: number) => ({
     initial: { scale: 0.8, opacity: 0 },
     animate: inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 },
@@ -39,7 +43,7 @@ const Mobile = () => {
             </p>
           </motion.div>
 
-          <div className="flex justify-center mt-8">
+          <motion.div {...BottomAnimation} className="flex justify-center mt-8">
             <div className="grid grid-cols-2 gap-8 justify-items-center">
               {partnerLogos.map((logo, index) => (
                 <motion.div
@@ -58,7 +62,7 @@ const Mobile = () => {
                 </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
           <div className="text-center mt-8 flex justify-center">
             <Link
               href="/portfolio"

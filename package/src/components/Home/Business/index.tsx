@@ -1,3 +1,6 @@
+"use client";
+import { useRef } from "react";
+import { useInView, motion } from "framer-motion";
 const businessAreas = [
   {
     title: "Mekanikal",
@@ -73,46 +76,58 @@ const businessAreas = [
 ];
 
 const Business = () => {
-  return (
-    <section className="dark:bg-darkmode overflow-x-hidden py-14">
-      <div className="container mx-auto lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-4">
-        <div className="bg-white dark:bg-midnight_text rounded-3xl lg:px-16 px-4 py-12 shadow-lg">
-          <div className="flex flex-col items-center text-center gap-3 mb-12">
-            {/* <p className="text-14 uppercase tracking-[0.4em] text-muted dark:text-white">CV Kurnia Jaya Teknik</p> */}
-            <h2 className="md:text-35 sm:text-28 text-24 font-semibold text-midnight_text dark:text-white">
-              <span className="text-primary">Bidang</span> Usaha
-            </h2>
-            <p className="text-base text-muted dark:text-white dark:text-opacity-70">4 Company Profile</p>
-          </div>
+  const ref = useRef(null);
+  const inView = useInView(ref);
+  const TopAnimation = {
+    initial: { y: -50, opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : {},
+    transition: { duration: 0.8 },
+  };
+  const BottomAnimation = {
+    initial: { y: 50, opacity: 0 },
+    animate: inView ? { y: 0, opacity: 1 } : {},
+    transition: { duration: 0.8, delay: 0.2 },
+  };
+   return (
+     <section className="dark:bg-darkmode overflow-x-hidden py-14">
+       <div className="container mx-auto lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-4">
+         <div className="bg-white dark:bg-midnight_text rounded-3xl lg:px-16 px-4 py-12 shadow-lg" ref={ref}>
+           <motion.div {...TopAnimation} className="flex flex-col items-center text-center gap-3 mb-12">
+             {/* <p className="text-14 uppercase tracking-[0.4em] text-muted dark:text-white">CV Kurnia Jaya Teknik</p> */}
+             <h2 className="md:text-35 sm:text-28 text-24 font-semibold text-midnight_text dark:text-white">
+               <span className="text-primary">Bidang</span> Usaha
+             </h2>
+             <p className="text-base text-muted dark:text-white dark:text-opacity-70">4 Company Profile</p>
+           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-6 mb-8">
-            {businessAreas.map((area) => (
-              <div
-                key={area.title}
-                className="bg-white/5 dark:bg-midnight_text border border-white/10 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary">
-                    {area.icon}
-                  </div>
-                  <h3 className="text-22 font-semibold text-midnight_text dark:text-white">
-                    {area.title}
-                  </h3>
-                </div>
-                <p className="text-muted dark:text-white dark:text-opacity-70 text-sm leading-relaxed">
-                  {area.description}
-                </p>
-              </div>
-            ))}
-          </div>
+           <motion.div {...BottomAnimation} className="grid lg:grid-cols-2 gap-6 mb-8">
+             {businessAreas.map((area) => (
+               <div
+                 key={area.title}
+                 className="bg-white/5 dark:bg-midnight_text border border-white/10 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300"
+               >
+                 <div className="flex items-center gap-3 mb-4">
+                   <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary">
+                     {area.icon}
+                   </div>
+                   <h3 className="text-22 font-semibold text-midnight_text dark:text-white">
+                     {area.title}
+                   </h3>
+                 </div>
+                 <p className="text-muted dark:text-white dark:text-opacity-70 text-sm leading-relaxed">
+                   {area.description}
+                 </p>
+               </div>
+             ))}
+           </motion.div>
 
-          <div className="text-center text-base text-midnight_text dark:text-white dark:text-opacity-70 max-w-3xl mx-auto">
-            CV Kurnia Jaya Teknik hadir sebagai perusahaan mekanikal, elektrikal, sistem otomasi, perdagangan dan jasa lainnya yang selalu mengutamakan kualitas terbaik dan kepercayaan pelanggan.
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+           <motion.div {...BottomAnimation} className="text-center text-base text-midnight_text dark:text-white dark:text-opacity-70 max-w-3xl mx-auto">
+             CV Kurnia Jaya Teknik hadir sebagai perusahaan mekanikal, elektrikal, sistem otomasi, perdagangan dan jasa lainnya yang selalu mengutamakan kualitas terbaik dan kepercayaan pelanggan.
+           </motion.div>
+         </div>
+       </div>
+     </section>
+   );
 };
 
 export default Business;
