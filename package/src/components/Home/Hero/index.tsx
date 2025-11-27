@@ -62,19 +62,6 @@ const Hero = () => {
                   />
                 </Link>
               </div>
-              <div>
-                <Link
-                  href="#"
-                  className="text-17 flex gap-2 items-center text-muted dark:text-white dark:text-opacity-70 hover:text-primary"
-                >
-                  See Features
-                  <Icon
-                    icon="solar:alt-arrow-right-linear"
-                    width="13"
-                    height="13"
-                  />
-                </Link>
-              </div>
             </div>
 
             <div className="lg:my-28 my-12">
@@ -101,14 +88,14 @@ const Hero = () => {
             {...rightAnimation}
             className="lg:col-span-6 col-span-12 pl-0 lg:block hidden flex items-start"
           >
-            <div className="relative w-full max-w-[498px] mx-auto">
+            <div className="relative w-full max-w-[420px] aspect-[16/9] mx-auto flex items-center justify-center">
               <Image
                 src={sliderImages[currentSlide]}
                 alt={`Gambar ${currentSlide + 1}`}
-                width={498}
-                height={651}
-                style={{ width: "100%", height: "auto" }}
-                className="rounded-2xl"
+                width={420}
+                height={236}
+                className="rounded-2xl object-cover w-full h-full"
+                style={{ width: "100%", height: "100%" }}
               />
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                 {sliderImages.map((_, index) => (
