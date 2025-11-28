@@ -4,6 +4,7 @@ import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ContactInfo = () => {
   const ref = useRef(null);
@@ -34,18 +35,53 @@ const ContactInfo = () => {
           ref={ref}
           className="container mx-auto lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-4 "
         >
-          <motion.div {...TopAnimation}>
-            <h2 className="font-semibold md:text-35 sm:text-28 text-24 text-midnight_text dark:text-white text-center">
-              <span className="text-primary">Kontak</span>
-            </h2>
-            <p className="text-base text-6 font-normal text-muted dark:text-darktext text-center m-auto py-4 lg:max-w-50% sm:max-w-75%">
-              Hubungi kami untuk informasi lebih lanjut tentang produk dan layanan kami. Tim kami siap membantu Anda.
-            </p>
-          </motion.div>
+          {/* ====================== 2 KOLOM (TEXT + GAMBAR) ====================== */}
+<motion.div {...TopAnimation}>
+  <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 py-6">
+
+    {/* LEFT: TEXT */}
+    <div className="space-y-4">
+      <h2 className="font-extrabold text-28 sm:text-32 md:text-36 text-midnight_text dark:text-white leading-snug">
+        <span className="text-primary">Kontak</span> & Informasi Perusahaan
+      </h2>
+
+      <p className="text-base sm:text-lg text-muted dark:text-darktext leading-relaxed">
+        Hubungi kami untuk mendapatkan informasi lebih lanjut terkait layanan yang kami sediakan.
+        Tim profesional kami siap merespon dengan cepat dan membantu kebutuhan Anda.
+      </p>
+
+      <div className="h-1 w-20 bg-primary rounded-full"></div>
+    </div>
+
+    {/* RIGHT: IMAGE */}
+    <div className="flex justify-center md:justify-end">
+      <div className="relative group">
+        <Image
+          src="/Kontent/Gambar 11.png"
+          alt="Kontak Image"
+          width={480}
+          height={480}
+          className="rounded-2xl object-cover  
+          group-hover:scale-[1.02] transition-transform duration-300"
+        />
+
+        {/* Decorative Glow */}
+        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition duration-300 
+        bg-primary/40 blur-xl"></div>
+      </div>
+    </div>
+
+  </div>
+</motion.div>
+
+
+          {/* ====================== CARDS & MAPS ====================== */}
           <motion.div {...bottomAnimation}>
             <div className="grid lg:grid-cols-2 gap-6 mt-8">
+
               {/* Contact Info Cards */}
               <div className="space-y-4">
+                {/* CARD 1 */}
                 <motion.div
                   {...cardAnimation(0)}
                   className="bg-white dark:bg-midnight_text p-5 rounded-xl border border-border dark:border-dark_border shadow-sm hover:shadow-md transition-shadow"
@@ -57,13 +93,10 @@ const ContactInfo = () => {
                       </svg>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-20 font-bold text-midnight_text dark:text-white mb-2">
-                        Alamat
-                      </h3>
+                      <h3 className="text-20 font-bold text-midnight_text dark:text-white mb-2">Alamat</h3>
                       <p className="text-base text-muted dark:text-white dark:text-opacity-70 leading-relaxed">
                         <strong className="text-midnight_text dark:text-white">CV. Kurnia Jaya Teknik</strong>
-                        <br />
-                        Jawa Timur, Indonesia
+                        <br /> Jawa Timur, Indonesia
                         <br />
                         <span className="text-sm text-muted dark:text-white dark:text-opacity-60">
                           Koordinat: -7.6978194, 112.8637701
@@ -73,6 +106,7 @@ const ContactInfo = () => {
                   </div>
                 </motion.div>
 
+                {/* CARD 2 */}
                 <motion.div
                   {...cardAnimation(1)}
                   className="bg-white dark:bg-midnight_text p-5 rounded-xl border border-border dark:border-dark_border shadow-sm hover:shadow-md transition-shadow"
@@ -84,9 +118,7 @@ const ContactInfo = () => {
                       </svg>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-20 font-bold text-midnight_text dark:text-white mb-2">
-                        Telepon
-                      </h3>
+                      <h3 className="text-20 font-bold text-midnight_text dark:text-white mb-2">Telepon</h3>
                       <p className="text-base text-muted dark:text-white dark:text-opacity-70">
                         Hubungi kami untuk informasi lebih lanjut
                       </p>
@@ -94,6 +126,7 @@ const ContactInfo = () => {
                   </div>
                 </motion.div>
 
+                {/* CARD 3 */}
                 <motion.div
                   {...cardAnimation(2)}
                   className="bg-white dark:bg-midnight_text p-5 rounded-xl border border-border dark:border-dark_border shadow-sm hover:shadow-md transition-shadow"
@@ -105,9 +138,7 @@ const ContactInfo = () => {
                       </svg>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-20 font-bold text-midnight_text dark:text-white mb-2">
-                        Email
-                      </h3>
+                      <h3 className="text-20 font-bold text-midnight_text dark:text-white mb-2">Email</h3>
                       <a
                         href="mailto:info@kurniajayateknik.com"
                         className="text-base text-primary hover:text-opacity-80 transition-all"
@@ -118,6 +149,7 @@ const ContactInfo = () => {
                   </div>
                 </motion.div>
 
+                {/* CARD 4 */}
                 <motion.div
                   {...cardAnimation(3)}
                   className="bg-white dark:bg-midnight_text p-5 rounded-xl border border-border dark:border-dark_border shadow-sm hover:shadow-md transition-shadow"
@@ -133,31 +165,33 @@ const ContactInfo = () => {
                         Jam Operasional
                       </h3>
                       <p className="text-base text-muted dark:text-white dark:text-opacity-70">
-                        Senin - Jumat: 08:00 - 17:00 WIB
-                        <br />
+                        Senin - Jumat: 08:00 - 17:00 WIB <br />
                         Sabtu: 08:00 - 12:00 WIB
                       </p>
                     </div>
                   </div>
                 </motion.div>
 
+                {/* WHATSAPP BUTTON */}
                 <a
                   href="https://wa.me/6281234567890"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-midnight_text dark:text-white border-2 border-primary py-4 px-8 rounded-lg hover:bg-primary hover:text-white transition-all w-full font-bold text-17 shadow-md hover:shadow-lg cursor-pointer group"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-white border-2 border-primary py-4 px-8 rounded-lg hover:bg-white hover:text-primary transition-all w-full font-bold text-17 shadow-md hover:shadow-lg cursor-pointer group"
                 >
                   <Icon
                     icon="ic:baseline-whatsapp"
                     width="24"
                     height="24"
-                    className="text-primary group-hover:text-white transition-colors flex-shrink-0"
+                    className="text-white group-hover:text-primary transition-colors flex-shrink-0"
                   />
-                  <span className="group-hover:text-white whitespace-nowrap">Hubungi <span className="text-primary group-hover:text-white transition-colors">Kami</span></span>
+                  <span className="group-hover:text-primary whitespace-nowrap">
+                    Hubungi <span className="text-white group-hover:text-primary">Kami</span>
+                  </span>
                 </a>
               </div>
 
-              {/* Google Maps */}
+              {/* GOOGLE MAPS */}
               <motion.div
                 {...cardAnimation(4)}
                 className="w-full h-full min-h-[400px] rounded-xl overflow-hidden shadow-lg bg-white dark:bg-midnight_text border border-border dark:border-dark_border"
@@ -172,10 +206,10 @@ const ContactInfo = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="w-full h-full"
-                    title="CV. Kurnia Jaya Teknik Location"
                   ></iframe>
                 </div>
               </motion.div>
+
             </div>
           </motion.div>
         </div>

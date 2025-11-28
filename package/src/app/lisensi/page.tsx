@@ -124,34 +124,38 @@ const Lisensi = () => {
           ))}
         </div>
 
-        {/* Popup Modal */}
+        {/* Popup Modal tanpa background */}
         {selectedIdx !== null && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center 
-            bg-black/50 backdrop-blur-sm p-4">
-
-            {/* Close */}
-            <button
-              onClick={() => setSelectedIdx(null)}
-              className="absolute top-5 right-5 bg-white/80 dark:bg-gray-700/80
-                w-10 h-10 flex items-center justify-center rounded-full text-gray-700 
-                dark:text-gray-200 hover:bg-red-500 hover:text-white transition-all shadow-lg"
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedIdx(null)} // klik area luar untuk close
+          >
+            <div
+              className="relative max-w-3xl w-full flex justify-center"
+              onClick={(e) => e.stopPropagation()} // supaya klik gambar tidak menutup
             >
-              ✕
-            </button>
+              {/* Tombol close menempel di gambar */}
+              <button
+                onClick={() => setSelectedIdx(null)}
+                className="absolute -top-3 -right-3 bg-white dark:bg-gray-700 
+                  text-gray-700 dark:text-white w-8 h-8 rounded-full shadow-md
+                  flex items-center justify-center hover:bg-red-500 hover:text-white transition-all"
+              >
+                ✕
+              </button>
 
-            {/* Image */}
-            <div className="max-w-3xl w-full flex items-center justify-center">
               <Image
                 src={lisensiData[selectedIdx].img}
                 alt="Preview"
-                width={1200}
-                height={800}
-                className="object-contain w-full max-h-[90vh] rounded-lg shadow-xl"
+                width={1000}
+                height={700}
+                className="object-contain w-full max-h-[85vh] rounded-lg"
               />
             </div>
-
           </div>
         )}
+
+
 
       </div>
     </section>
