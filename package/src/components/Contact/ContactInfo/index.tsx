@@ -30,14 +30,14 @@ const ContactInfo = () => {
 
   return (
     <>
-      <section className="dark:bg-darkmode overflow-hidden py-10">
+      <section className="dark:bg-darkmode overflow-hidden pt-4 pb-10">
         <div
           ref={ref}
           className="container mx-auto lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-4 "
         >
           {/* ====================== 2 KOLOM (TEXT + GAMBAR) ====================== */}
 <motion.div {...TopAnimation}>
-  <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 py-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 py-4">
 
     {/* LEFT: TEXT */}
     <div className="space-y-4">

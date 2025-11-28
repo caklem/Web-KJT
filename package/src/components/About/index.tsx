@@ -69,15 +69,16 @@ const About = () => {
               initial="hidden"
               animate={inView ? "show" : "hidden"}
               transition={{ duration: 0.8 }}
-              className="flex justify-center items-start"
+              className="flex justify-center items-start md:col-span-1"
             >
-              <div className="w-full rounded-2xl overflow-hidden aspect-square">
+              <div className="w-full rounded-2xl overflow-hidden">
                 <Image
                   src="/Kontent/Gambar 4.jpg"
                   alt="Gambar 1"
-                  width={350}
-                  height={350}
-                  className="object-cover w-full h-full"
+                  width={800}
+                  height={1000}
+                  className="object-cover w-full"
+                  style={{ height: "auto" }}
                 />
               </div>
             </motion.div>
@@ -88,7 +89,7 @@ const About = () => {
               initial="hidden"
               animate={inView ? "show" : "hidden"}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col justify-center items-center"
+              className="flex flex-col justify-center items-center md:col-span-1"
             >
               <div className="text-base text-muted dark:text-white/70 leading-relaxed text-justify space-y-6">
                 <p>
@@ -119,15 +120,16 @@ const About = () => {
               initial="hidden"
               animate={inView ? "show" : "hidden"}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex justify-center items-start"
+              className="flex justify-center items-start md:col-span-1"
             >
-              <div className="w-full rounded-2xl overflow-hidden aspect-square">
+              <div className="w-full rounded-2xl overflow-hidden">
                 <Image
                   src="/Kontent/Gambar 5.jpg"
                   alt="Gambar 2"
-                  width={350}
-                  height={350}
-                  className="object-cover w-full h-full"
+                  width={800}
+                  height={1000}
+                  className="object-cover w-full"
+                  style={{ height: "auto" }}
                 />
               </div>
             </motion.div>
@@ -158,7 +160,7 @@ const About = () => {
           initial="hidden"
           animate={inView ? "show" : "hidden"}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid md:grid-cols-3 gap-6 mb-12"
+          className="flex flex-col md:grid md:grid-cols-3 gap-6 mb-12 items-center md:items-start"
         >
           {[
             {
@@ -179,17 +181,17 @@ const About = () => {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-heroBg dark:bg-midnight_text rounded-2xl p-6 text-center shadow-sm"
+              className="bg-heroBg dark:bg-midnight_text rounded-2xl p-8 flex flex-col items-center shadow-sm w-full max-w-sm"
             >
               <div className="flex justify-center mb-4">
                 <div className="w-20 h-20 bg-white dark:bg-darkmode rounded-full flex items-center justify-center shadow-lg">
                   <Icon icon={item.icon} width="48" className="text-primary" />
                 </div>
               </div>
-              <h3 className="text-22 font-semibold text-midnight_text dark:text-white mb-3">
+              <h3 className="text-22 font-semibold text-midnight_text dark:text-white mb-3 text-center">
                 {item.title}
               </h3>
-              <p className="text-base text-muted dark:text-white/70">
+              <p className="text-base text-muted dark:text-white/70 text-center">
                 {item.text}
               </p>
             </div>

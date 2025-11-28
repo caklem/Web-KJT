@@ -13,51 +13,45 @@ const TopAnimation = {
 const lisensiData = [
   {
     title: "Surat Keterangan Terdaftar",
-    img: "/Kontent/L1.png",
+    img: "",
     desc: "Dokumen resmi yang menyatakan bahwa perusahaan telah terdaftar secara hukum.",
     detail: "Surat Keterangan Terdaftar adalah bukti legalitas awal perusahaan...",
   },
   {
     title: "Nomor Induk Berusaha",
-    img: "/Kontent/L2.png",
+    img: "",
     desc: "Identitas pelaku usaha yang diterbitkan pemerintah sebagai legalitas bisnis.",
     detail:
       "Nomor Induk Berusaha (NIB) adalah nomor identitas wajib setiap pelaku usaha...",
   },
   {
     title: "Nomor Induk Berusaha",
-    img: "/Kontent/L3.png",
+    img: "",
     desc: "Identitas pelaku usaha sebagai bukti registrasi resmi.",
     detail:
       "NIB ini merupakan bukti tambahan legalitas yang telah diverifikasi...",
   },
   {
     title: "Surat Izin Usaha Perdagangan",
-    img: "/Kontent/L4.png",
+    img: "",
     desc: "Izin resmi pemerintah untuk menjalankan usaha perdagangan.",
     detail: "SIUP adalah dokumen perizinan untuk aktivitas perdagangan secara legal...",
   },
   {
     title: "Izin Usaha Industri",
-    img: "/Kontent/L5.png",
+    img: "",
     desc: "Dokumen izin untuk menjalankan usaha pada sektor industri.",
     detail:
       "Izin Usaha Industri menandakan bahwa perusahaan memenuhi standar pemerintah...",
   },
   {
     title: "NPWP",
-    img: "/Kontent/L6.png",
+    img: "",
     desc: "Nomor Pokok Wajib Pajak sebagai identitas perpajakan perusahaan.",
     detail:
       "NPWP digunakan sebagai identitas wajib pajak dan keperluan administrasi...",
   },
-  {
-    title: "Surat Pengukuhan PKP",
-    img: "/Kontent/L7.png",
-    desc: "Dokumen bahwa perusahaan telah dikukuhkan sebagai PKP.",
-    detail:
-      "PKP wajib memungut, menyetor, dan melaporkan pajak pertambahan nilai...",
-  },
+  
 ];
 
 const Lisensi = () => {
@@ -65,7 +59,7 @@ const Lisensi = () => {
 
   const breadcrumbLinks = [
     { href: "/", text: "Beranda" },
-    { href: "/lisensi", text: "Lisensi" },
+    { href: "/lisensi", text: "Sertifikat" },
   ];
 
   return (
@@ -75,7 +69,7 @@ const Lisensi = () => {
         {/* Title + Breadcrumb */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 mt-8">
           <h1 className="font-bold md:text-5xl sm:text-4xl text-3xl text-midnight_text dark:text-white">
-            Lisensi
+            Sertifikat
           </h1>
           <Breadcrumb links={breadcrumbLinks} />
         </div>
@@ -89,7 +83,7 @@ const Lisensi = () => {
           className="items-start mb-6"
         >
           <h2 className="font-semibold md:text-35 sm:text-28 text-24 text-midnight_text dark:text-white text-center">
-            Legalitas <span className="text-primary">Perusahaan</span>
+            Sertifikat <span className="text-primary">Perusahaan</span>
           </h2>
         </motion.div>
 
@@ -124,38 +118,34 @@ const Lisensi = () => {
           ))}
         </div>
 
-        {/* Popup Modal tanpa background */}
+        {/* Popup Modal */}
         {selectedIdx !== null && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedIdx(null)} // klik area luar untuk close
-          >
-            <div
-              className="relative max-w-3xl w-full flex justify-center"
-              onClick={(e) => e.stopPropagation()} // supaya klik gambar tidak menutup
-            >
-              {/* Tombol close menempel di gambar */}
-              <button
-                onClick={() => setSelectedIdx(null)}
-                className="absolute -top-3 -right-3 bg-white dark:bg-gray-700 
-                  text-gray-700 dark:text-white w-8 h-8 rounded-full shadow-md
-                  flex items-center justify-center hover:bg-red-500 hover:text-white transition-all"
-              >
-                ✕
-              </button>
+          <div className="fixed inset-0 z-50 flex items-center justify-center 
+            bg-black/50 backdrop-blur-sm p-4">
 
+            {/* Close */}
+            <button
+              onClick={() => setSelectedIdx(null)}
+              className="absolute top-5 right-5 bg-white/80 dark:bg-gray-700/80
+                w-10 h-10 flex items-center justify-center rounded-full text-gray-700 
+                dark:text-gray-200 hover:bg-red-500 hover:text-white transition-all shadow-lg"
+            >
+              ✕
+            </button>
+
+            {/* Image */}
+            <div className="max-w-3xl w-full flex items-center justify-center">
               <Image
                 src={lisensiData[selectedIdx].img}
                 alt="Preview"
-                width={1000}
-                height={700}
-                className="object-contain w-full max-h-[85vh] rounded-lg"
+                width={1200}
+                height={800}
+                className="object-contain w-full max-h-[90vh] rounded-lg shadow-xl"
               />
             </div>
+
           </div>
         )}
-
-
 
       </div>
     </section>

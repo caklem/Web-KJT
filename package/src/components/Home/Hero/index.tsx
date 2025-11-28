@@ -35,17 +35,15 @@ const Hero = () => {
       <div className="container mx-auto lg:max-w-(--breakpoint-xl) relative z-1 md:max-w-(--breakpoint-md) px-4">
         <div className="grid grid-cols-12 items-start">
           <motion.div {...leftAnimation} className="lg:col-span-6 col-span-12">
-            <h1 className="md:text-50 sm:text-40 text-28 text-midnight_text lg:text-start mb-9 lg:w-full w-3/4">
+            <h1 className="md:text-50 sm:text-40 text-28 text-midnight_text dark:text-white lg:text-start mb-9 lg:w-full w-3/4">
               CV. Kurnia Jaya Teknik
               <br />
-              <span className="bg-border dark:bg-darkHeroBg  md:text-50 text-36 rounded-lg lg:text-start text-primary max-w-max">
-                Penyedia Peralatan Listrik Terpercaya
+              <span className="bg-border dark:bg-transparent md:text-50 text-36 rounded-lg lg:text-start text-primary max-w-max">
+                Solusi Terpercaya untuk Peralatan Listrik & Sistem Otomasi
               </span>
-              <br />
-              di Jawa Timur.
             </h1>
             <p className="sm:text-19 text-16 text-muted dark:text-white dark:text-opacity-70 text-start lg:max-w-full sm:max-w-75%">
-              Kami adalah penyedia peralatan listrik profesional di Jawa Timur dengan pengalaman bertahun-tahun. Melayani kebutuhan peralatan listrik untuk berbagai proyek dengan kualitas terbaik dan pelayanan yang memuaskan.
+              Perusahaan profesional yang menyediakan solusi lengkap untuk peralatan listrik, sistem mekanikal, elektrikal, dan otomasi industri. Dengan pengalaman bertahun-tahun dan tim ahli bersertifikasi, kami berkomitmen memberikan kualitas terbaik dan pelayanan yang memuaskan untuk berbagai kebutuhan proyek Anda.
             </p>
             <div className="flex items-center mt-12 mb-6">
               <Link

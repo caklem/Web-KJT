@@ -5,9 +5,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 const galleryImages = [
-  "/Kontent/Foto Portofolio/P1.jpg",
-  "/Kontent/Foto Portofolio/P2.jpg",
-  "/Kontent/Foto Portofolio/P3.jpg",
   "/Kontent/Foto Portofolio/P4.jpg",
   "/Kontent/Foto Portofolio/P5.jpg",
   "/Kontent/Foto Portofolio/P6.jpg",
@@ -17,8 +14,6 @@ const galleryImages = [
   "/Kontent/Foto Portofolio/P10.jpg",
   "/Kontent/Foto Portofolio/P11.jpg",
   "/Kontent/Foto Portofolio/P12.jpg",
-  "/Kontent/Foto Portofolio/P13.jpg",
-  "/Kontent/Foto Portofolio/P14.jpg",
   "/Kontent/Foto Portofolio/P15.jpg",
   "/Kontent/Foto Portofolio/P16.jpg",
 ];
