@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // Ganti dengan verification code dari Google Search Console
+    google: "dYIVWmgJfWMBGBJL9g_1Uk7vxiRa3DgpbLuc",
   },
   icons: {
     icon: [{ url: "/Kontent/LOGO 2.png", type: "image/png" }],
