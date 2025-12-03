@@ -71,9 +71,9 @@ export const metadata: Metadata = {
     google: "dYIVWmgJfWMBGBJL9g_1Uk7vxiRa3DgpbLuc",
   },
   icons: {
-    icon: [{ url: "/Kontent/LOGO 2.png", type: "image/png" }],
-    shortcut: "/Kontent/LOGO 2.png",
-    apple: "/Kontent/LOGO 2.png",
+    icon: [{ url: "/Kontent/icon.png", type: "image/png" }],
+    shortcut: "/Kontent/icon.png",
+    apple: "/Kontent/icon.png",
   },
 };
 

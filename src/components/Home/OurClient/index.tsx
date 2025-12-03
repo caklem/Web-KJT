@@ -35,7 +35,7 @@ const OurClient = () => {
                   alt={`Client ${index + 1}`}
                   width={200}
                   height={100}
-                  className="object-contain opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                  className="object-contain"
                   style={{ maxHeight: "100px", width: "auto", height: "auto" }}
                 />
               </div>
