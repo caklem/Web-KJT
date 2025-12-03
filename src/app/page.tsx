@@ -9,6 +9,7 @@ import Mobile from "@/components/Home/Mobile";
 import Pricing from "@/components/Home/Pricing";
 import VisionMission from "@/components/VisionMission";
 import Business from "@/components/Home/Business";
+import OurClient from "@/components/Home/OurClient";
 
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function Home() {
       <Business />
       <Spend />
       <Payment />
+      <OurClient />
       <div id="documentation">
         <Documentation />
       </div>

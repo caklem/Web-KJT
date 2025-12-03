@@ -85,7 +85,7 @@ const Hero = () => {
               </div>
               <div className="mt-8">
                 <p className="text-18 text-muted dark:text-white dark:text-opacity-70 text-center mb-4">
-                  Trusted by
+                  Our Client
                 </p>
                 <div className="flex space-x-4 sm:space-x-6 justify-center w-full items-center flex-wrap gap-4">
                   {Heroimage.map((item, index) => (
@@ -131,7 +131,7 @@ const Hero = () => {
             </div>
             <div className="mt-26">
               <p className="text-18 text-muted dark:text-white dark:text-opacity-70 text-center mb-4">
-                Trusted by
+                Our Client
               </p>
               <div className="flex justify-center items-center gap-6 flex-wrap">
                 {Heroimage.map((item, index) => (

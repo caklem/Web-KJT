@@ -3,16 +3,12 @@ import { text } from "stream/consumers";
 //hero
 export const Heroimage = [
   {
+    lightimage: "/Kontent/Gea.jpg",
+    darkimage: "/Kontent/Gea.jpg",
+  },
+  {
     lightimage: "/Kontent/Nestle.png",
     darkimage: "/Kontent/Nestle.png",
-  },
-  {
-    lightimage: "/Kontent/krisbow.png",
-    darkimage: "/Kontent/krisbow.png",
-  },
-  {
-    lightimage: "/Kontent/Mandiri.png",
-    darkimage: "/Kontent/Mandiri.png",
   },
 ];
 
